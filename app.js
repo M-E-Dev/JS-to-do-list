@@ -9,7 +9,7 @@ function addEl() {
   newToDoArea.innerHTML += `<li class="newEl">
   <span class="newElCheck" onclick=doneEl(this.closest(".newEl"))>&#128077;</span>
   <span class="newElText ">${newToDo}</span>
-  <span class="newElClose" onclick=remove(this.closest(".newEl"))>&#x274C; </span>
+  <span class="newElClose" onclick=removeEl(this.closest(".newEl"))>&#x274C; </span>
 </li>`;
   inputText.value = "";
   if (newToDoArea.innerHTML) {
@@ -28,7 +28,7 @@ function doneEl(el) {
 }
 
 
-function remove(el) {
+function removeEl(el) {
   let element = el;
   element.remove();
   if (!newToDoArea.innerHTML) {
